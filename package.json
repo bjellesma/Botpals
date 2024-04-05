@@ -1,0 +1,28 @@
+{
+  "name": "nodebot",
+  "version": "1.0.0",
+  "description": "AI chatbot in node js",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjellesma/Nodebot.git"
+  },
+  "author": "Bill Jellesma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjellesma/Nodebot/issues"
+  },
+  "homepage": "https://github.com/bjellesma/Nodebot#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "node": "^18.20.1",
+    "openai": "^4.32.2",
+    "readline-sync": "^1.4.10"
+  }
+}
