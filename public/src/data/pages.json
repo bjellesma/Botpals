@@ -1,0 +1,12 @@
+[
+    {
+      "id": "1",
+      "title": "About",
+      "pageLink": "/about"
+    },
+    {
+      "id": "2",
+      "title": "Pals",
+      "pageLink": "/bots"
+    }
+  ]

@@ -1,17 +1,7 @@
-import { Bot } from '../interfaces/Bot'
 import React from 'react'
+import PagesNav from './pages/PagesNav'
 
 const Navbar = () => {
-    const bots: Bot[] = [
-        {
-            botName: "Bill",
-            botLink: "/billbot.html"
-        },
-        {
-            botName: "ChatGPT",
-            botLink: "/chatgpt.html"
-        },
-    ]
     // todo make function to authenticate user
     const loggedIn = false
     return (
@@ -39,16 +29,7 @@ const Navbar = () => {
                                 >
                             </a>
                             <div className="md:ml-auto">
-
-                                <div className="flex space-x-2">
-                                    {/* each item in the list needs to have a key prop */}
-                                {bots.map((bot, index) => (
-                                        <a key={index}
-                                        href={bot.botLink}
-                                        className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                                    >{bot.botName}</a>
-                                    ))}
-                                </div>
+                                <PagesNav />
                             </div>
                         </div>
                     </div>

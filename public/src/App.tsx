@@ -1,4 +1,7 @@
+import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import BotList from './components/BotList'
+import Chat from './components/Chat'
 import React from 'react'
 
 const App = () => {
@@ -8,7 +11,9 @@ const App = () => {
     return (
         <>
             <Navbar />
-
+            {/* <Hero /> */}
+            <Chat />
+            <BotList />
         </>
     )
 }
