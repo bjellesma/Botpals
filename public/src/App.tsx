@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import BotList from './components/BotList'
 import Chat from './components/Chat'
 import React from 'react'
+import ViewAllBots from './components/ViewAllBots'
 
 const App = () => {
     
@@ -11,9 +12,10 @@ const App = () => {
     return (
         <>
             <Navbar />
-            {/* <Hero /> */}
-            <Chat />
+            <Hero title="Welcome to Nodebot" subtitle="Home of all of your bot pals"/>
+            {/* <Chat /> */}
             <BotList />
+            <ViewAllBots />
         </>
     )
 }
