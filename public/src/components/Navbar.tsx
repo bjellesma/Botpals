@@ -22,10 +22,10 @@ const Navbar = () => {
                                 <img
                                     className="h-10 w-auto"
                                     src="https://robohash.org/mail@ashallendesign.co.uk"
-                                    alt="Nodebot"
+                                    alt="Botpals"
                                 />
                                 <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                                >Nodebot</span
+                                >Botpals</span
                                 >
                             </a>
                             <div className="md:ml-auto">

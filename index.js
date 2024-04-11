@@ -38,7 +38,7 @@ async function main() {
   // need array outside while loop to hold messages
   const chatHistory = [];
   // readlineSync will get input from the command line
-  console.log(colors.bold.yellow("Welcome to Nodebot (type exit to exit)"));
+  console.log(colors.bold.yellow("Welcome to Botpals (type exit to exit)"));
   if (env.isOpenAiUsed) {
     console.log(
       colors.bold.yellow(

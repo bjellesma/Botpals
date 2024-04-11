@@ -1,6 +1,11 @@
 import React from 'react'
+import { BotInterface } from '../interfaces/BotInterface'
 
-const Bot = ({bot}) => {
+interface BotProps {
+  bot: BotInterface;
+}
+
+const Bot:React.FC<BotProps> = ({bot}) => {
   return (
     <div className='bg-white rounded-xl shadow-md relative'>
     <div className='p-4'>
@@ -9,7 +14,7 @@ const Bot = ({bot}) => {
         <h3 className='text-xl font-bold'>{bot.description}</h3>
       </div>
 
-      <div className='mb-5'>{bot.link}</div>
+      <div className='mb-5'>{bot.location}</div>
 
       <button
         className='text-indigo-500 mb-5 hover:text-indigo-600'

@@ -1,5 +1,5 @@
 {
-  "name": "nodebot",
+  "name": "botpals",
   "version": "1.0.0",
   "description": "AI chatbot in node js",
   "type": "module",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bjellesma/Nodebot.git"
+    "url": "git+https://github.com/bjellesma/Botpals.git"
   },
   "author": "Bill Jellesma",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bjellesma/Nodebot/issues"
+    "url": "https://github.com/bjellesma/Botpals/issues"
   },
-  "homepage": "https://github.com/bjellesma/Nodebot#readme",
+  "homepage": "https://github.com/bjellesma/Botpals#readme",
   "dependencies": {
     "@types/node": "^20.12.5",
     "colors": "^1.4.0",

@@ -12,7 +12,7 @@ const App = () => {
     return (
         <>
             <Navbar />
-            <Hero title="Welcome to Nodebot" subtitle="Home of all of your bot pals"/>
+            <Hero title="Welcome to Botpals" subtitle="Home of all of your bot pals"/>
             {/* <Chat /> */}
             <BotList />
             <ViewAllBots />
