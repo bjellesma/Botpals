@@ -1,6 +1,7 @@
 export interface BotInterface {
     id: number;
     name: string;
-    description: string;
+    tagline: string;
+    fullDescription: string;
     location: string;
   }
