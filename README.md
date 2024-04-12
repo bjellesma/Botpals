@@ -1,6 +1,8 @@
 # Botpals
 AI Chatbot using nodejs, react, vite, and tailwind css
 
-## Progress as of 4-8-2024
+## Progress as of 4-11-2024
 
-![Botpals Progress](progress.png)
+![Home page](screenshots/home.png)
+![bots page](screenshots/bots.png)
+![404](screenshots/404.png)
