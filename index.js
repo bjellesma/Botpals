@@ -1,3 +1,4 @@
+// todo remove node js in favor of flask
 import openai from "./config/open-ai.js";
 import env from "./config/env-vars.js";
 import readlineSync from "readline-sync";

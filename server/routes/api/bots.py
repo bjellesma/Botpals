@@ -1,4 +1,13 @@
-[
+from flask import Blueprint
+from flask_cors import CORS
+
+bot_routes = Blueprint('bot_routes', __name__)
+# any port from localhost is okay to access these routes
+CORS(bot_routes, origins=["http://localhost:*"])  # Apply CORS to the bot_routes blueprint
+
+@bot_routes.route('/api/bots')
+def get_all_bots():
+    bots = [
     {
       "id": "1",
       "name": "Claudette",
@@ -34,3 +43,4 @@
       "location": "Boston, MA"
     }
   ]
+    return bots
