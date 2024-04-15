@@ -11,9 +11,11 @@ const BotList = ({ topList = false }) => {
   // we can't use an async function directly on useEffect to fetch data so we make another function inside the useeffect function
   // we want async because we are querying the backend, we'll show a loading spinner while it loads
   useEffect(() => {
+    // todo want to use db to get list of top rated bots
+    const apiUrl = topList ? '/api/bots?_limit=3' : '/api/bots'
     const fetchBots = async () => {
       try {
-        const res = await fetch('/api/bots')
+        const res = await fetch(apiUrl)
         const data = await res.json();
         setBots(data)
         setIsLoading(false)
@@ -24,9 +26,6 @@ const BotList = ({ topList = false }) => {
     fetchBots()
   }, [])
 
-  // top jobs is a slice of the top three
-  // todo want to be able to use db to rate bots in the future
-  // let bots = topList ? botsData.slice(0,3) : botsData
   return (
     <section className="bg-blue-50 px-4 py-10">
       <div className='container-xl lg:container m-auto'>
