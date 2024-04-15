@@ -1,9 +1,9 @@
-import { useState,useEffect } from 'react'
-// import botsData from '../data/bots.json'
+import { useState, useEffect } from 'react'
 import Bot from './Bot'
+import Spinner from './Spinner'
 import { BotInterface } from '../interfaces/BotInterface'
 
-const BotList = ({topList = false}) => {
+const BotList = ({ topList = false }) => {
   const [bots, setBots] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
@@ -12,17 +12,17 @@ const BotList = ({topList = false}) => {
   // we want async because we are querying the backend, we'll show a loading spinner while it loads
   useEffect(() => {
     const fetchBots = async () => {
-      try{
+      try {
         const res = await fetch('http://localhost:5000/api/bots')
         const data = await res.json();
         setBots(data)
-      }catch(error){
+      } catch (error) {
         console.log('error fetching data', error)
-      }finally{
+      } finally {
         // finally will run whether the try passes or not so we can set the load spinner to false
         setIsLoading(false)
       }
-      
+
     }
     fetchBots()
   }, [])
@@ -34,12 +34,23 @@ const BotList = ({topList = false}) => {
     <section className="bg-blue-50 px-4 py-10">
       <div className='container-xl lg:container m-auto'>
         <h1 className='text-3xl font-bold text-indigo-500 mb-6 text-center'>{topList ? 'Top Bots' : 'All Bots'}</h1>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-      {/* key is needed because otherwise this generates an error */}
-        {bots.map((bot:BotInterface) => (
-              <Bot key={bot.id} bot={bot} />
+
+
+        {isLoading ? (<Spinner loading={isLoading} />) :
+          // this must be inside a fragment or you will get a reactnode error
+          <>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {bots.map((bot: BotInterface) => (
+              
+                // {/* key is needed because otherwise this generates an error */}
+                <Bot key={bot.id} bot={bot} />
+              
             ))}
-        </div>
+            </div>
+          </>
+        }
+
+
       </div>
     </section>
   )

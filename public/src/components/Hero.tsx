@@ -1,5 +1,3 @@
-import React from 'react'
-
 // you can array destructure the first param into whatever props you're passing in
 const Hero = ({title = 'Bot Name', subtitle='Chat with a bot'}) => {
   return (

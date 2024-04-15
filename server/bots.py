@@ -43,6 +43,14 @@ bots = [
 class BotList(Resource):
     def get(self):
         return bots
+    
+    def post(self):
+        data = request.json
+        last_bot_id = bots[-1].get("id")
+        new_bot = {"id": last_bot_id+1, **data}
+        bots.append(new_bot)
+
+        return new_bot
 
 
 class BotResource(Resource):
