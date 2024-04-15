@@ -13,16 +13,13 @@ const BotList = ({ topList = false }) => {
   useEffect(() => {
     const fetchBots = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/bots')
+        const res = await fetch('/api/bots')
         const data = await res.json();
         setBots(data)
+        setIsLoading(false)
       } catch (error) {
         console.log('error fetching data', error)
-      } finally {
-        // finally will run whether the try passes or not so we can set the load spinner to false
-        setIsLoading(false)
       }
-
     }
     fetchBots()
   }, [])
