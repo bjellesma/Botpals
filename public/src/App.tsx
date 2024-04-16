@@ -3,7 +3,7 @@ import MainLayout from './layouts/MainLayout'
 import NotFoundPage from './pages/NotFoundPage'
 import HomePage from './pages/HomePage'
 import BotsPage from './pages/BotsPage'
-import BotPage from './pages/BotPage'
+import BotChatPage, {botLoader} from './pages/BotChatPage'
 
 // the main router object containing all of the pages
 const router = createBrowserRouter(
@@ -13,7 +13,7 @@ const router = createBrowserRouter(
             <Route index element={<HomePage />} />
             <Route path='/bots' element={<BotsPage />} />
             {/* id is a variable that we can pass */}
-            <Route path='/bots/:id' element={<BotPage />} />
+            <Route path='/bots/:id/chat' element={<BotChatPage />} loader={botLoader} />
             {/* the wildcard is a catchall meaning that all other pages will lead to a 404 */}
             <Route path='*' element={<NotFoundPage />} />
         </Route>

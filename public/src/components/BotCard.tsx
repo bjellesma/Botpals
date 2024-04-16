@@ -8,7 +8,7 @@ interface BotProps {
   bot: BotInterface;
 }
 
-const Bot:React.FC<BotProps> = ({bot}) => {
+const BotCard:React.FC<BotProps> = ({bot}) => {
   // this is an example of Component state where it is scoped to only the component that it is defined on
   // first array index is the name of the variable and the second is the function that it will call when changed
   const [showFullDescription, setShowFullDescription] = useState(false)
@@ -39,15 +39,22 @@ const Bot:React.FC<BotProps> = ({bot}) => {
           {bot.location}
         </div>
         <Link
-          to={`/bots/${bot.id}`}
+          to={`/bots/${bot.id}/chat`}
           className='h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm'
         >
-          Get help from {bot.name}
+          Chat with {bot.name}
+        </Link>
+        <Link
+          to={`/bots/${bot.id}/profile`}
+          className='h-[36px] bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-center text-sm'
+        >
+          See profile of {bot.name}
         </Link>
       </div>
     </div>
+    
   </div>
   )
 }
 
-export default Bot
+export default BotCard

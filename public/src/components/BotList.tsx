@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Bot from './Bot'
+import BotCard from './BotCard'
 import Spinner from './Spinner'
 import { BotInterface } from '../interfaces/BotInterface'
 
@@ -39,7 +39,7 @@ const BotList = ({ topList = false }) => {
             {bots.map((bot: BotInterface) => (
               
                 // {/* key is needed because otherwise this generates an error */}
-                <Bot key={bot.id} bot={bot} />
+                <BotCard key={bot.id} bot={bot} />
               
             ))}
             </div>
