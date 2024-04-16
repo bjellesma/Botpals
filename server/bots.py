@@ -5,36 +5,50 @@ bots = [
     {
         "id": 1,
         "name": "Claudette",
-                "tagline": "Claudette uses the API of claude.ai to help",
-                "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "location": "Boston, MA"
+        "tagline": "Claudette uses the API of claude.ai to help",
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "location": "Boston, MA",
+        "builder": {
+            "name": 'Anthropic',
+            "birthplace": "San Francisco, California",
+            "parent": "Dario Amodei"
+        }
     },
     {
         "id": 2,
         "name": "Chatty",
-                "location": "Miami, FL",
-                "tagline": "Chaty use the API of ChatGPT to help.",
-                "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "company": {
-                    "name": "Veneer Solutions",
-                    "description": "Veneer Solutions is a creative agency specializing in digital design and development. Our team is dedicated to pushing the boundaries of creativity and innovation to deliver exceptional results for our clients.",
-                    "contactEmail": "contact@loremipsum.com",
-                    "contactPhone": "555-555-5555"
-                }
+        "location": "Miami, FL",
+        "tagline": "Chatty use the API of ChatGPT to help.",
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "builder": {
+            "name": 'OpenAI',
+            "birthplace": "San Francisco, California",
+            "parent": "Sam Altman"
+        }
     },
     {
         "id": 3,
         "name": "Bill",
-                "tagline": "Bill is just a standard human masquerading as a bot. He's a little tempermental at times",
-                "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "location": "Boston, MA"
+        "tagline": "Bill is just a standard human masquerading as a bot. He's a little tempermental at times",
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "location": "Boston, MA",
+        "builder": {
+            "name": 'Bill Jellesma',
+            "birthplace": "Massachusetts",
+            "parent": "Bill Jellesma"
+        }
     },
     {
         "id": 4,
         "name": "Henry",
-                "tagline": "Henry is an extra bot not normally shown",
-                "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "location": "Boston, MA"
+        "tagline": "Henry is an extra bot not normally shown",
+        "fullDescription": "A lost soul, Henry roams the Earth in search of someone who will listen to his tall tales.",
+        "location": "Boston, MA",
+        "builder": {
+            "name": 'N/A',
+            "birthplace": "Planet Earth",
+            "parent": "No parent. He's always existed"
+        }
     }
 ]
 

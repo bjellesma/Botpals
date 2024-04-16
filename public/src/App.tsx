@@ -4,6 +4,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import HomePage from './pages/HomePage'
 import BotsPage from './pages/BotsPage'
 import BotChatPage, {botLoader} from './pages/BotChatPage'
+import BotProfilePage from './pages/BotProfilePage'
 
 // the main router object containing all of the pages
 const router = createBrowserRouter(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
             <Route path='/bots' element={<BotsPage />} />
             {/* id is a variable that we can pass */}
             <Route path='/bots/:id/chat' element={<BotChatPage />} loader={botLoader} />
+            <Route path='/bots/:id/profile' element={<BotProfilePage />} loader={botLoader} />
             {/* the wildcard is a catchall meaning that all other pages will lead to a 404 */}
             <Route path='*' element={<NotFoundPage />} />
         </Route>
