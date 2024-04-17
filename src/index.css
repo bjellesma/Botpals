@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.profile-icon img{
+    height:150px;
+    margin:20px;
+    border-radius: 100px;
+    padding:5px;
+}

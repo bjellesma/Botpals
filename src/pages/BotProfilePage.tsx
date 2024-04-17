@@ -1,18 +1,20 @@
 import { Link, useLoaderData } from "react-router-dom"
 import Spinner from "../components/Spinner"
 import BotNotFound from "../components/BotNotFound"
+import ProfilePicture from "../components/ProfilePicture"
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa"
 
 const BotProfilePage = () => {
     // because we passed the loader attribute to the component on app, useloaderdata will take the loader from the attribute
     const bot = useLoaderData()
-  
+    const botPic = `/public/images/${bot.profile_pic}`
   // if there is no bot, we'll return the 404 bot
   if(bot == null){
     return <BotNotFound />
   }
   return (
     <>
+    
       <section>
         <div className='container m-auto py-6 px-6'>
           <Link
@@ -23,6 +25,8 @@ const BotProfilePage = () => {
           </Link>
         </div>
       </section>
+        
+      <ProfilePicture src={botPic} />
 
       <section className='bg-indigo-50'>
         <div className='container m-auto py-10 px-6'>
