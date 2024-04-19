@@ -16,8 +16,9 @@ The frontend react server runs on port 3001 as defined in `vite.config.ts`
 
 If you're using pipenv, you can simply run `pipenv run server` while developing. The server runs on port 5000 by default
 
-## Progress as of 4-11-2024
+## Progress as of 4-18-2024
 
 ![Home page](screenshots/home.png)
 ![bots page](screenshots/bots.png)
 ![404](screenshots/404.png)
+![Chat](screenshots/chats.png)
