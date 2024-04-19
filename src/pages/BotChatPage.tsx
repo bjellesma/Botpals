@@ -44,7 +44,7 @@ const Botpage = () => {
           </div>
         </section>
     
-        <Chat />
+        <Chat bot={bot}/>
         </>
       )}
     </>

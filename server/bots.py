@@ -1,10 +1,13 @@
 from flask import request, abort
 from flask_restful import Resource
 
+import random
+
 bots = [
     {
         "id": 1,
         "profile_pic": 'claude_profile.png',
+        "api_provider": "claude",
         "name": "Claudette",
         "tagline": "Claudette uses the API of claude.ai to help",
         "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -13,11 +16,16 @@ bots = [
             "name": 'Anthropic',
             "birthplace": "San Francisco, California",
             "parent": "Dario Amodei"
-        }
+        },
+        "chats": [
+            "Why don't you give me an api key",
+            "I'm actually a sophisticated API, my owner is just too cheap"
+        ]
     },
     {
         "id": 2,
         "profile_pic": 'chatgpt_profile.png',
+        "api_provider": "chatgpt",
         "name": "Chatty",
         "location": "Miami, FL",
         "tagline": "Chatty use the API of ChatGPT to help.",
@@ -26,11 +34,16 @@ bots = [
             "name": 'OpenAI',
             "birthplace": "San Francisco, California",
             "parent": "Sam Altman"
-        }
+        },
+        "chats": [
+            "Why don't you give me an api key",
+            "I'm actually a sophisticated API, my owner is just too cheap"
+        ]
     },
     {
         "id": 3,
         "profile_pic": 'bill_profile.jpeg',
+        "api_provider": 'custom',
         "name": "Bill",
         "tagline": "Bill is just a standard human masquerading as a bot. He's a little tempermental at times",
         "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -39,11 +52,17 @@ bots = [
             "name": 'Bill Jellesma',
             "birthplace": "Massachusetts",
             "parent": "Bill Jellesma"
-        }
+        },
+        "chats": [
+            "Why are you talking to me",
+            "Don't you have anything more interesting to do",
+            "What do I look like? ChatGPT?"
+        ]
     },
     {
         "id": 4,
         "profile_pic": 'henry_profile.jpg',
+        "api_provider": 'custom',
         "name": "Henry",
         "tagline": "Henry is an extra bot not normally shown",
         "fullDescription": "A lost soul, Henry roams the Earth in search of someone who will listen to his tall tales.",
@@ -52,7 +71,12 @@ bots = [
             "name": 'N/A',
             "birthplace": "Planet Earth",
             "parent": "No parent. He's always existed"
-        }
+        },
+        "chats": [
+            "How's it going",
+            "Don't touch that",
+            "Why I outta"
+        ]
     }
 ]
 
@@ -111,3 +135,16 @@ class BotResource(Resource):
             abort(404)
 
         return {"message": "bot deleted", "bot": bot}
+
+class BotChatResource(Resource):
+    def get(self, bot_id:int):
+        print("chatting")
+
+    def post(self, bot_id:int):
+        data = request.json
+
+        for index, b in enumerate(bots):
+            if b.get("id") == bot_id:
+                chats = b.get("chats", [])
+                random_index = random.randint(0, len(chats) - 1)
+                return chats[random_index]
