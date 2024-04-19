@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import BotsPage from './pages/BotsPage'
 import BotChatPage, {botLoader} from './pages/BotChatPage'
 import BotProfilePage from './pages/BotProfilePage'
+import AboutPage from './pages/AboutPage'
 
 // the main router object containing all of the pages
 const router = createBrowserRouter(
@@ -12,6 +13,7 @@ const router = createBrowserRouter(
         // mainlayout is used so that it applies to every page within
         <Route path='/' element={<MainLayout />}>
             <Route index element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path='/bots' element={<BotsPage />} />
             {/* id is a variable that we can pass */}
             <Route path='/bots/:id/chat' element={<BotChatPage />} loader={botLoader} />
