@@ -7,7 +7,7 @@ import { FaArrowLeft, FaMapMarker } from "react-icons/fa"
 const BotProfilePage = () => {
     // because we passed the loader attribute to the component on app, useloaderdata will take the loader from the attribute
     const bot = useLoaderData()
-    const botPic = `/public/images/${bot.profile_pic}`
+    const botPic = `/dist/images/${bot.profile_pic}`
   // if there is no bot, we'll return the 404 bot
   if(bot == null){
     return <BotNotFound />

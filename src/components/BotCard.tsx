@@ -13,7 +13,7 @@ const BotCard:React.FC<BotProps> = ({bot}) => {
   // this is an example of Component state where it is scoped to only the component that it is defined on
   // first array index is the name of the variable and the second is the function that it will call when changed
   const [showFullDescription, setShowFullDescription] = useState(false)
-  const botPic = `/public/images/${bot.profile_pic}`
+  const botPic = `/dist/images/${bot.profile_pic}`
   return (
     <div className='bg-white rounded-xl shadow-md relative'>
     <div className='p-4'>

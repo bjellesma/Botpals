@@ -11,7 +11,7 @@ const Chat:React.FC<BotProps> = ({bot}) => {
     const [formText, setFormText] =useState("")
     const [sentText, setSentText] = useState("")
     const [response, setResponse] =useState("")
-    const botPic = `/public/images/${bot.profile_pic}`
+    const botPic = `/dist/images/${bot.profile_pic}`
     const chatPlaceholder = `Chat with ${bot.name}...`
 
     const navigate = useNavigate();
