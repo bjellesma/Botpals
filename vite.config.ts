@@ -14,7 +14,7 @@ export default defineConfig({
     // will go to the base url /api
     proxy: {
       '/api': {
-        target:process.env.SERVERADDRESS,
+        target:"https://bjellesma.pythonanywhere.com/",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api')
       }
