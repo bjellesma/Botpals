@@ -17,7 +17,7 @@ const Chat:React.FC<BotProps> = ({bot}) => {
     const navigate = useNavigate();
 
     const addChat = async (chat:string) => {
-        const res = await fetch(`/api/bots/${bot.id}/chat`, {
+        const res = await fetch(`https://bjellesma.pythonanywhere.com/api/bots/${bot.id}/chat`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

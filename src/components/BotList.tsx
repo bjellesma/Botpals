@@ -12,7 +12,7 @@ const BotList = ({ topList = false }) => {
   // we want async because we are querying the backend, we'll show a loading spinner while it loads
   useEffect(() => {
     // todo want to use db to get list of top rated bots
-    const apiUrl = topList ? '/api/bots?_limit=3' : '/api/bots'
+    const apiUrl = topList ? 'https://bjellesma.pythonanywhere.com/api/bots?_limit=3' : 'https://bjellesma.pythonanywhere.com/api/bots'
     const fetchBots = async () => {
       try {
         const res = await fetch(apiUrl)

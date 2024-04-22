@@ -9,7 +9,7 @@ let isLoading = true;
 const botLoader =async ({params}:any) => {
   let data = null
   try{
-    const res = await fetch(`/api/bots/${params.id}`)
+    const res = await fetch(`https://bjellesma.pythonanywhere.com/api/bots/${params.id}`)
     const pageStatus = await res.status;
     // if api is not found, don't attempt to fetch json
     if(pageStatus === 200){
